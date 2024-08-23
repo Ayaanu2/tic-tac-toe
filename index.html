@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Tic Tac Toe</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Intro Screen -->
+    <div class="intro-screen" id="introScreen">
+        <h1 class="intro-title">Tic Tac Toe</h1>
+        <div class="intro-buttons">
+            <button class="intro-button" id="multiplayerButton">Multiplayer</button>
+            <button class="intro-button" id="computerButton">Computer</button>
+            <button class="intro-button" id="settingsButton">Settings</button>
+        </div>
+    </div>
+
+    <!-- Settings Screen (Initially Hidden) -->
+    <div class="settings-screen" id="settingsScreen" style="display: none;">
+        <h2>Settings</h2>
+        <div class="setting-option">
+            <label for="volumeControl">Volume:</label>
+            <input type="range" id="volumeControl" min="0" max="1" step="0.1" value="0.5">
+        </div>
+        <div class="setting-option">
+            <label for="brightnessControl">Game Brightness:</label>
+            <input type="range" id="brightnessControl" min="0.5" max="1.5" step="0.1" value="1">
+        </div>
+        <div class="settings-buttons">
+            <button class="intro-button" id="saveSettingsButton">Save</button>
+            <button class="intro-button" id="cancelSettingsButton">Cancel</button>
+        </div>
+    </div>
+
+    <!-- Game Container (Hidden initially) -->
+    <div class="game-container" id="gameContainer" style="display: none;">
+        <button class="back-button" id="backButton">← Back</button>
+        <h1>Tic Tac Toe</h1>
+        
+        <!-- Player name inputs -->
+        <div class="player-inputs">
+            <input type="text" id="playerXName" placeholder="Enter Player X Name">
+            <input type="text" id="playerOName" placeholder="Enter Player O Name">
+        </div>
+
+        <!-- Symbol selection area -->
+        <div class="symbol-selection">
+            <h2>Select Your Symbols</h2>
+            <div class="symbol-options">
+                <div class="symbol" data-symbol="❌" data-symbol-class="symbol-x">❌</div>
+                <div class="symbol" data-symbol="⭕" data-symbol-class="symbol-o">⭕</div>
+                <div class="symbol" data-symbol="🔥" data-symbol-class="symbol-flame">🔥</div>
+                <div class="symbol" data-symbol="💧" data-symbol-class="symbol-water">💧</div>
+                <div class="symbol" data-symbol="🌟" data-symbol-class="symbol-star">🌟</div>
+                <div class="symbol" data-symbol="🍀" data-symbol-class="symbol-luck">🍀</div>
+            </div>
+        </div>
+
+        <!-- Turn indicator -->
+        <div class="turn-indicator" id="turnIndicator">Waiting for players to choose symbols...</div>
+
+        <div class="board" id="board">
+            <div class="cell" data-index="0"></div>
+            <div class="cell" data-index="1"></div>
+            <div class="cell" data-index="2"></div>
+            <div class="cell" data-index="3"></div>
+            <div class="cell" data-index="4"></div>
+            <div class="cell" data-index="5"></div>
+            <div class="cell" data-index="6"></div>
+            <div class="cell" data-index="7"></div>
+            <div class="cell" data-index="8"></div>
+        </div>
+        <div class="message" id="message"></div>
+        <button id="resetButton">Restart Game</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
